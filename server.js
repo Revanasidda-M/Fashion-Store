@@ -754,17 +754,21 @@ const server = http.createServer(async (req, res) => {
     if (!res.headersSent)
       sendJson(res, 500, {
         success: false,
-        message: "Unexpected server error. Check the terminal for details.",
+        message: error.message || "Unexpected server error. Check the terminal for details.",
       });
     else res.destroy();
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`Fashion Store is running at http://localhost:${PORT}`);
-  console.log("Demo store data is saved in data/store.json");
-  if (!process.env.JWT_SECRET)
-    console.log(
-      "Note: using the local demo JWT secret; set JWT_SECRET in .env before deployment.",
-    );
-});
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`Fashion Store is running at http://localhost:${PORT}`);
+    console.log("Demo store data is saved in data/store.json");
+    if (!process.env.JWT_SECRET)
+      console.log(
+        "Note: using the local demo JWT secret; set JWT_SECRET in .env before deployment.",
+      );
+  });
+}
+
+module.exports = server;
