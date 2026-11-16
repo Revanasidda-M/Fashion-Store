@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Shop everyday fashion, clothing, footwear and accessories at Fashion Store."
+    />
+    <title>Fashion Store | Everyday style, made easy</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-panel">
+            <div class="hero-copy">
+              <p class="eyebrow">The new season edit</p>
+              <h1>Style that fits your life.</h1>
+              <p>
+                Find easy-to-wear favourites for every day, from timeless basics
+                to the little details that complete your look.
+              </p>
+              <a class="button button-accent" href="/products.html"
+                >Shop the collection <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <div class="hero-image">
+              <img
+                src="/images/men-casual-shirt.jpg"
+                alt="Casual fashion from the latest collection"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="categories">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Browse by style</p>
+              <h2>Shop by category</h2>
+              <p>Start with the category you love.</p>
+            </div>
+            <a class="text-link" href="/products.html"
+              >Explore all products ↗</a
+            >
+          </div>
+          <div class="category-grid" id="categoriesContainer">
+            <p class="loading">Loading categories…</p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Picked for you</p>
+              <h2>Featured products</h2>
+              <p>Good-looking essentials, ready for your wardrobe.</p>
+            </div>
+            <a class="text-link" href="/products.html">View all products ↗</a>
+          </div>
+          <div class="product-grid" id="productsContainer">
+            <p class="loading">Loading products…</p>
+          </div>
+          <div class="view-all-row">
+            <a class="button button-light" href="/products.html"
+              >View the full collection</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div
+            class="hero-panel"
+            style="
+              min-height: 0;
+              grid-template-columns: 1fr;
+              padding: clamp(25px, 5vw, 55px);
+            "
+          >
+            <p class="eyebrow">A better everyday wardrobe</p>
+            <h2
+              style="
+                font-size: clamp(27px, 4vw, 42px);
+                max-width: 680px;
+                margin: 0 0 12px;
+              "
+            >
+              Thoughtful pieces. Easy choices. A style that feels like you.
+            </h2>
+            <p style="color: var(--muted); max-width: 620px; margin: 0 0 20px">
+              Explore clothes, footwear and accessories in one simple shopping
+              experience.
+            </p>
+            <div>
+              <a class="button" href="/products.html"
+                >Find your next favourite</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order confirmed | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="confirmation-card">
+        <div class="success-mark">✓</div>
+        <p class="eyebrow">Thank you for your order</p>
+        <h1>Order confirmed!</h1>
+        <p>
+          Your demo order was created successfully. You can review the details
+          in My Orders.
+        </p>
+        <div class="confirmation-id" id="confirmedOrderId">
+          Order ID loading…
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+          "
+        >
+          <a class="button button-accent" href="/orders.html">View my orders</a
+          ><a class="button button-light" href="/products.html"
+            >Continue shopping</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/confirmation.js"></script>
+  </body>
+</html>

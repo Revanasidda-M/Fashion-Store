@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main class="auth-shell">
+      <section class="auth-card">
+        <p class="eyebrow">Welcome back</p>
+        <h1>Log in</h1>
+        <p class="subtext">Sign in to see your cart, profile and orders.</p>
+        <div id="loginNotice" class="notice" hidden></div>
+        <form id="loginForm">
+          <div class="form-field">
+            <label for="email">Email address</label
+            ><input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-field">
+            <label for="password">Password</label
+            ><input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <button
+            class="button button-accent button-block"
+            id="loginSubmit"
+            type="submit"
+          >
+            Log in
+          </button>
+        </form>
+        <p class="auth-foot">
+          New to Fashion Store? <a href="/register.html">Create an account</a>
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/login.js"></script>
+  </body>
+</html>

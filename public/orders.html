@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My orders | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-top">
+        <div class="container">
+          <p class="eyebrow">Your account</p>
+          <h1>My orders</h1>
+          <p>Track your purchases and revisit order details.</p>
+        </div>
+      </section>
+      <section class="shop-layout">
+        <div class="container">
+          <div id="ordersNotice" class="notice" hidden></div>
+          <div class="orders-list" id="ordersContainer">
+            <p class="loading">Loading your orders…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/orders.js"></script>
+  </body>
+</html>

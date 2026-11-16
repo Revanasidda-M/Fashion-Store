@@ -1,0 +1,995 @@
+{
+  "categories": [
+    {
+      "category_id": "cat-men",
+      "category_name": "Men",
+      "description": "Everyday essentials and modern menswear.",
+      "image": "men-casual-shirt.jpg"
+    },
+    {
+      "category_id": "cat-women",
+      "category_name": "Women",
+      "description": "Comfortable styles for every occasion.",
+      "image": "women-casual-top.jpg"
+    },
+    {
+      "category_id": "cat-kids",
+      "category_name": "Kids",
+      "description": "Bright, comfortable looks for little ones.",
+      "image": "kids-tshirt.jpg"
+    },
+    {
+      "category_id": "cat-footwear",
+      "category_name": "Footwear",
+      "description": "Shoes for everyday comfort and style.",
+      "image": "footwear.jpg"
+    },
+    {
+      "category_id": "cat-accessories",
+      "category_name": "Accessories",
+      "description": "Bags, watches and finishing touches.",
+      "image": "accessories.jpg"
+    }
+  ],
+  "products": [
+    {
+      "product_id": "p-men-shirt",
+      "product_name": "Men Casual Shirt",
+      "category_id": "cat-men",
+      "description": "A smart-casual button-up shirt in a versatile earthy shade. Wear it tucked or untucked.",
+      "price": 799,
+      "brand": "North Street",
+      "image": "men-casual-shirt.jpg",
+      "sizes": [
+        {
+          "size_id": "shirt-s",
+          "size": "S",
+          "stock": 8
+        },
+        {
+          "size_id": "shirt-m",
+          "size": "M",
+          "stock": 15
+        },
+        {
+          "size_id": "shirt-l",
+          "size": "L",
+          "stock": 11
+        },
+        {
+          "size_id": "shirt-xl",
+          "size": "XL",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-jeans",
+      "product_name": "Men Regular Jeans",
+      "category_id": "cat-men",
+      "description": "Classic regular-fit denim designed for daily wear, easy movement and versatile styling.",
+      "price": 1299,
+      "brand": "North Street",
+      "image": "men-jeans.jpg",
+      "sizes": [
+        {
+          "size_id": "jeans-30",
+          "size": "30",
+          "stock": 7
+        },
+        {
+          "size_id": "jeans-32",
+          "size": "32",
+          "stock": 12
+        },
+        {
+          "size_id": "jeans-34",
+          "size": "34",
+          "stock": 10
+        },
+        {
+          "size_id": "jeans-36",
+          "size": "36",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-polo",
+      "product_name": "Men Pique Cotton Polo",
+      "category_id": "cat-men",
+      "description": "Classic collar polo crafted from premium combed pique cotton with ribbed armbands and a clean two-button placket.",
+      "price": 649,
+      "brand": "Urban Muse",
+      "image": "men-polo.jpg",
+      "sizes": [
+        {
+          "size_id": "polo-s",
+          "size": "S",
+          "stock": 14
+        },
+        {
+          "size_id": "polo-m",
+          "size": "M",
+          "stock": 20
+        },
+        {
+          "size_id": "polo-l",
+          "size": "L",
+          "stock": 18
+        },
+        {
+          "size_id": "polo-xl",
+          "size": "XL",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-blazer",
+      "product_name": "Men Tailored Slim Blazer",
+      "category_id": "cat-men",
+      "description": "Modern single-breasted structured blazer cut in a flattering slim silhouette with notch lapels.",
+      "price": 3499,
+      "brand": "North Street",
+      "image": "men-blazer.jpg",
+      "sizes": [
+        {
+          "size_id": "blazer-38",
+          "size": "38",
+          "stock": 5
+        },
+        {
+          "size_id": "blazer-40",
+          "size": "40",
+          "stock": 9
+        },
+        {
+          "size_id": "blazer-42",
+          "size": "42",
+          "stock": 6
+        },
+        {
+          "size_id": "blazer-44",
+          "size": "44",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-hoodie",
+      "product_name": "Men Fleece Pullover Hoodie",
+      "category_id": "cat-men",
+      "description": "Heavyweight brushed fleece hoodie with double-layer drawstring hood and roomy front pouch pocket.",
+      "price": 1199,
+      "brand": "Everyday Edit",
+      "image": "men-hoodie.jpg",
+      "sizes": [
+        {
+          "size_id": "hoodie-s",
+          "size": "S",
+          "stock": 10
+        },
+        {
+          "size_id": "hoodie-m",
+          "size": "M",
+          "stock": 16
+        },
+        {
+          "size_id": "hoodie-l",
+          "size": "L",
+          "stock": 14
+        },
+        {
+          "size_id": "hoodie-xl",
+          "size": "XL",
+          "stock": 7
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-denim-jacket",
+      "product_name": "Men Vintage Denim Jacket",
+      "category_id": "cat-men",
+      "description": "Authentic trucker-style denim jacket featuring classic contrast stitching and vintage wash detailing.",
+      "price": 2199,
+      "brand": "North Street",
+      "image": "men-denim-jacket.jpg",
+      "sizes": [
+        {
+          "size_id": "djk-s",
+          "size": "S",
+          "stock": 6
+        },
+        {
+          "size_id": "djk-m",
+          "size": "M",
+          "stock": 12
+        },
+        {
+          "size_id": "djk-l",
+          "size": "L",
+          "stock": 9
+        },
+        {
+          "size_id": "djk-xl",
+          "size": "XL",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-chinos",
+      "product_name": "Men Stretch Chino Trousers",
+      "category_id": "cat-men",
+      "description": "Clean flat-front trousers woven with a touch of stretch for day-to-night flexibility and comfort.",
+      "price": 1399,
+      "brand": "Everyday Edit",
+      "image": "men-chinos.jpg",
+      "sizes": [
+        {
+          "size_id": "chino-30",
+          "size": "30",
+          "stock": 8
+        },
+        {
+          "size_id": "chino-32",
+          "size": "32",
+          "stock": 14
+        },
+        {
+          "size_id": "chino-34",
+          "size": "34",
+          "stock": 11
+        },
+        {
+          "size_id": "chino-36",
+          "size": "36",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "product_id": "p-men-sweater",
+      "product_name": "Men Cable-Knit Crewneck Sweater",
+      "category_id": "cat-men",
+      "description": "Chunky textured knit sweater crafted from warm, breathable yarns. Perfect for brisk evening layers.",
+      "price": 1799,
+      "brand": "Urban Muse",
+      "image": "men-sweater.jpg",
+      "sizes": [
+        {
+          "size_id": "sweater-m",
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size_id": "sweater-l",
+          "size": "L",
+          "stock": 12
+        },
+        {
+          "size_id": "sweater-xl",
+          "size": "XL",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-dress",
+      "product_name": "Women Floral Dress",
+      "category_id": "cat-women",
+      "description": "A flowing floral dress for brunches, holidays and special days. Pair it with simple sandals.",
+      "price": 999,
+      "brand": "Urban Muse",
+      "image": "women-floral-dress.jpg",
+      "sizes": [
+        {
+          "size_id": "dress-s",
+          "size": "S",
+          "stock": 6
+        },
+        {
+          "size_id": "dress-m",
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size_id": "dress-l",
+          "size": "L",
+          "stock": 7
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-top",
+      "product_name": "Women Casual Top",
+      "category_id": "cat-women",
+      "description": "A comfortable ribbed casual top that pairs easily with denim, skirts or trousers.",
+      "price": 699,
+      "brand": "Urban Muse",
+      "image": "women-casual-top.jpg",
+      "sizes": [
+        {
+          "size_id": "top-s",
+          "size": "S",
+          "stock": 8
+        },
+        {
+          "size_id": "top-m",
+          "size": "M",
+          "stock": 12
+        },
+        {
+          "size_id": "top-l",
+          "size": "L",
+          "stock": 9
+        },
+        {
+          "size_id": "top-xl",
+          "size": "XL",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-trousers",
+      "product_name": "Women Wide Leg Trousers",
+      "category_id": "cat-women",
+      "description": "High-waisted, fluid wide-leg silhouette with gentle pleats that lend effortless polish to every ensemble.",
+      "price": 1499,
+      "brand": "Urban Muse",
+      "image": "women-trousers.jpg",
+      "sizes": [
+        {
+          "size_id": "trouser-s",
+          "size": "S",
+          "stock": 9
+        },
+        {
+          "size_id": "trouser-m",
+          "size": "M",
+          "stock": 15
+        },
+        {
+          "size_id": "trouser-l",
+          "size": "L",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-blouse",
+      "product_name": "Women Satin Silk Blouse",
+      "category_id": "cat-women",
+      "description": "Smooth satin blouse with gentle draping, button cuffs, and a subtle lustre that elevates your workweek.",
+      "price": 1199,
+      "brand": "The Finishing Touch",
+      "image": "women-blouse.jpg",
+      "sizes": [
+        {
+          "size_id": "blouse-xs",
+          "size": "XS",
+          "stock": 5
+        },
+        {
+          "size_id": "blouse-s",
+          "size": "S",
+          "stock": 12
+        },
+        {
+          "size_id": "blouse-m",
+          "size": "M",
+          "stock": 14
+        },
+        {
+          "size_id": "blouse-l",
+          "size": "L",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-trench",
+      "product_name": "Women Classic Trench Coat",
+      "category_id": "cat-women",
+      "description": "Timeless double-breasted outerwear featuring storm flaps, tortoiseshell buttons, and tie waist belt.",
+      "price": 3899,
+      "brand": "North Street",
+      "image": "women-trench.jpg",
+      "sizes": [
+        {
+          "size_id": "trench-s",
+          "size": "S",
+          "stock": 4
+        },
+        {
+          "size_id": "trench-m",
+          "size": "M",
+          "stock": 7
+        },
+        {
+          "size_id": "trench-l",
+          "size": "L",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-cardigan",
+      "product_name": "Women Knit Wrap Cardigan",
+      "category_id": "cat-women",
+      "description": "Soft rib-knitted cardigan with elegant wrap front, balloon sleeves, and cozy ribbed cuffs.",
+      "price": 1299,
+      "brand": "Everyday Edit",
+      "image": "women-cardigan.jpg",
+      "sizes": [
+        {
+          "size_id": "cardigan-s",
+          "size": "S",
+          "stock": 7
+        },
+        {
+          "size_id": "cardigan-m",
+          "size": "M",
+          "stock": 11
+        },
+        {
+          "size_id": "cardigan-l",
+          "size": "L",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-skirt",
+      "product_name": "Women Pleated Midi Skirt",
+      "category_id": "cat-women",
+      "description": "Accordion-pleated flowing skirt with elastic comfort waistband that transitions from day to night.",
+      "price": 1099,
+      "brand": "Urban Muse",
+      "image": "women-skirt.jpg",
+      "sizes": [
+        {
+          "size_id": "skirt-s",
+          "size": "S",
+          "stock": 8
+        },
+        {
+          "size_id": "skirt-m",
+          "size": "M",
+          "stock": 13
+        },
+        {
+          "size_id": "skirt-l",
+          "size": "L",
+          "stock": 9
+        }
+      ]
+    },
+    {
+      "product_id": "p-women-jumpsuit",
+      "product_name": "Women Linen Utility Jumpsuit",
+      "category_id": "cat-women",
+      "description": "Breathable one-and-done jumpsuit with button front, patch pockets, and removable matching tie belt.",
+      "price": 1899,
+      "brand": "Urban Muse",
+      "image": "women-jumpsuit.jpg",
+      "sizes": [
+        {
+          "size_id": "jump-s",
+          "size": "S",
+          "stock": 6
+        },
+        {
+          "size_id": "jump-m",
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size_id": "jump-l",
+          "size": "L",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-tee",
+      "product_name": "Kids T-Shirt",
+      "category_id": "cat-kids",
+      "description": "Soft cotton T-shirt for everyday play. Lightweight fabric and a cheerful print make it an easy favourite.",
+      "price": 499,
+      "brand": "Everyday Edit",
+      "image": "kids-tshirt.jpg",
+      "sizes": [
+        {
+          "size_id": "kids-4-5",
+          "size": "4-5Y",
+          "stock": 10
+        },
+        {
+          "size_id": "kids-6-7",
+          "size": "6-7Y",
+          "stock": 12
+        },
+        {
+          "size_id": "kids-8-9",
+          "size": "8-9Y",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-dungarees",
+      "product_name": "Kids Denim Dungarees",
+      "category_id": "cat-kids",
+      "description": "Durable washed denim overalls with adjustable buckled suspenders, bib pocket, and easy snap closures.",
+      "price": 999,
+      "brand": "Everyday Edit",
+      "image": "kids-dungarees.jpg",
+      "sizes": [
+        {
+          "size_id": "dung-3-4",
+          "size": "3-4Y",
+          "stock": 8
+        },
+        {
+          "size_id": "dung-5-6",
+          "size": "5-6Y",
+          "stock": 11
+        },
+        {
+          "size_id": "dung-7-8",
+          "size": "7-8Y",
+          "stock": 9
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-hoodie",
+      "product_name": "Kids Fleece Hoodie",
+      "category_id": "cat-kids",
+      "description": "Cozy fleece hooded pullover designed for active playtime with ribbed trims and warm kangaroo pouch.",
+      "price": 799,
+      "brand": "Everyday Edit",
+      "image": "kids-hoodie.jpg",
+      "sizes": [
+        {
+          "size_id": "khood-4-5",
+          "size": "4-5Y",
+          "stock": 10
+        },
+        {
+          "size_id": "khood-6-7",
+          "size": "6-7Y",
+          "stock": 14
+        },
+        {
+          "size_id": "khood-8-9",
+          "size": "8-9Y",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-dress",
+      "product_name": "Kids Floral Party Dress",
+      "category_id": "cat-kids",
+      "description": "Playful flared cotton skater dress with vibrant blossoms and soft breathable lining for party days.",
+      "price": 849,
+      "brand": "Urban Muse",
+      "image": "kids-dress.jpg",
+      "sizes": [
+        {
+          "size_id": "kdress-3-4",
+          "size": "3-4Y",
+          "stock": 7
+        },
+        {
+          "size_id": "kdress-5-6",
+          "size": "5-6Y",
+          "stock": 12
+        },
+        {
+          "size_id": "kdress-7-8",
+          "size": "7-8Y",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-joggers",
+      "product_name": "Kids Active Jogger Pants",
+      "category_id": "cat-kids",
+      "description": "Everyday cotton joggers featuring stretchy ribbed waistband, drawcord, and snug ankle cuffs.",
+      "price": 699,
+      "brand": "Everyday Edit",
+      "image": "kids-joggers.jpg",
+      "sizes": [
+        {
+          "size_id": "kjog-4-5",
+          "size": "4-5Y",
+          "stock": 12
+        },
+        {
+          "size_id": "kjog-6-7",
+          "size": "6-7Y",
+          "stock": 15
+        },
+        {
+          "size_id": "kjog-8-9",
+          "size": "8-9Y",
+          "stock": 10
+        }
+      ]
+    },
+    {
+      "product_id": "p-kids-puffer",
+      "product_name": "Kids Lightweight Puffer Jacket",
+      "category_id": "cat-kids",
+      "description": "Quilted insulated outerwear that resists wind and light rain, keeping little adventurers warm on chilly days.",
+      "price": 1499,
+      "brand": "North Street",
+      "image": "kids-puffer.jpg",
+      "sizes": [
+        {
+          "size_id": "kpuff-5-6",
+          "size": "5-6Y",
+          "stock": 6
+        },
+        {
+          "size_id": "kpuff-7-8",
+          "size": "7-8Y",
+          "stock": 9
+        },
+        {
+          "size_id": "kpuff-9-10",
+          "size": "9-10Y",
+          "stock": 7
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-sneakers",
+      "product_name": "Everyday Sneakers",
+      "category_id": "cat-footwear",
+      "description": "Versatile everyday footwear featuring a clean profile and cushioned comfort for daily outings.",
+      "price": 1499,
+      "brand": "Step Studio",
+      "image": "footwear.jpg",
+      "sizes": [
+        {
+          "size_id": "shoe-6",
+          "size": "UK 6",
+          "stock": 6
+        },
+        {
+          "size_id": "shoe-7",
+          "size": "UK 7",
+          "stock": 8
+        },
+        {
+          "size_id": "shoe-8",
+          "size": "UK 8",
+          "stock": 10
+        },
+        {
+          "size_id": "shoe-9",
+          "size": "UK 9",
+          "stock": 7
+        },
+        {
+          "size_id": "shoe-10",
+          "size": "UK 10",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-chelsea",
+      "product_name": "Classic Chelsea Boots",
+      "category_id": "cat-footwear",
+      "description": "Polished leather ankle boots with flexible elastic side gussets, pull tabs, and non-slip lug tread.",
+      "price": 2999,
+      "brand": "Step Studio",
+      "image": "footwear-chelsea.jpg",
+      "sizes": [
+        {
+          "size_id": "boot-7",
+          "size": "UK 7",
+          "stock": 5
+        },
+        {
+          "size_id": "boot-8",
+          "size": "UK 8",
+          "stock": 9
+        },
+        {
+          "size_id": "boot-9",
+          "size": "UK 9",
+          "stock": 8
+        },
+        {
+          "size_id": "boot-10",
+          "size": "UK 10",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-running",
+      "product_name": "AeroFlex Running Shoes",
+      "category_id": "cat-footwear",
+      "description": "Ultra-breathable engineered knit running trainers equipped with responsive shock-absorbing cushioning.",
+      "price": 1899,
+      "brand": "Step Studio",
+      "image": "footwear-running.jpg",
+      "sizes": [
+        {
+          "size_id": "run-6",
+          "size": "UK 6",
+          "stock": 7
+        },
+        {
+          "size_id": "run-7",
+          "size": "UK 7",
+          "stock": 12
+        },
+        {
+          "size_id": "run-8",
+          "size": "UK 8",
+          "stock": 14
+        },
+        {
+          "size_id": "run-9",
+          "size": "UK 9",
+          "stock": 9
+        },
+        {
+          "size_id": "run-10",
+          "size": "UK 10",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-oxford",
+      "product_name": "Brogue Oxford Shoes",
+      "category_id": "cat-footwear",
+      "description": "Timeless handcrafted leather formal dress shoes finished with punch-hole wingtip brogue detailing.",
+      "price": 2799,
+      "brand": "Step Studio",
+      "image": "footwear-oxford.jpg",
+      "sizes": [
+        {
+          "size_id": "ox-7",
+          "size": "UK 7",
+          "stock": 5
+        },
+        {
+          "size_id": "ox-8",
+          "size": "UK 8",
+          "stock": 8
+        },
+        {
+          "size_id": "ox-9",
+          "size": "UK 9",
+          "stock": 7
+        },
+        {
+          "size_id": "ox-10",
+          "size": "UK 10",
+          "stock": 4
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-heels",
+      "product_name": "Block Heel Sandals",
+      "category_id": "cat-footwear",
+      "description": "Chic square-toe sandals designed with sturdy 2.5-inch block heel, cushioned footbed, and ankle clasp.",
+      "price": 1699,
+      "brand": "Step Studio",
+      "image": "footwear-heels.jpg",
+      "sizes": [
+        {
+          "size_id": "heel-4",
+          "size": "UK 4",
+          "stock": 5
+        },
+        {
+          "size_id": "heel-5",
+          "size": "UK 5",
+          "stock": 10
+        },
+        {
+          "size_id": "heel-6",
+          "size": "UK 6",
+          "stock": 11
+        },
+        {
+          "size_id": "heel-7",
+          "size": "UK 7",
+          "stock": 6
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-loafers",
+      "product_name": "Penny Slip-On Loafers",
+      "category_id": "cat-footwear",
+      "description": "Supple genuine leather loafers with signature penny cutout strap and moccasin toe seam construction.",
+      "price": 2299,
+      "brand": "Step Studio",
+      "image": "footwear-loafers.jpg",
+      "sizes": [
+        {
+          "size_id": "loaf-7",
+          "size": "UK 7",
+          "stock": 6
+        },
+        {
+          "size_id": "loaf-8",
+          "size": "UK 8",
+          "stock": 10
+        },
+        {
+          "size_id": "loaf-9",
+          "size": "UK 9",
+          "stock": 8
+        },
+        {
+          "size_id": "loaf-10",
+          "size": "UK 10",
+          "stock": 5
+        }
+      ]
+    },
+    {
+      "product_id": "p-footwear-canvas",
+      "product_name": "White Canvas Low-Tops",
+      "category_id": "cat-footwear",
+      "description": "Clean minimalist canvas lace-up sneakers with vulcanized rubber sole and comfortable padded collar.",
+      "price": 899,
+      "brand": "Step Studio",
+      "image": "footwear-canvas.jpg",
+      "sizes": [
+        {
+          "size_id": "can-6",
+          "size": "UK 6",
+          "stock": 9
+        },
+        {
+          "size_id": "can-7",
+          "size": "UK 7",
+          "stock": 15
+        },
+        {
+          "size_id": "can-8",
+          "size": "UK 8",
+          "stock": 16
+        },
+        {
+          "size_id": "can-9",
+          "size": "UK 9",
+          "stock": 11
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-bag",
+      "product_name": "Classic Tan Handbag",
+      "category_id": "cat-accessories",
+      "description": "A structured everyday handbag with a timeless shape and room for your daily essentials.",
+      "price": 1299,
+      "brand": "The Finishing Touch",
+      "image": "accessories.jpg",
+      "sizes": [
+        {
+          "size_id": "bag-one-size",
+          "size": "One Size",
+          "stock": 14
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-watch",
+      "product_name": "Chronograph Leather Watch",
+      "category_id": "cat-accessories",
+      "description": "Minimalist stainless steel analog watch featuring genuine leather strap and reliable quartz timing.",
+      "price": 2499,
+      "brand": "The Finishing Touch",
+      "image": "accessories-watch.jpg",
+      "sizes": [
+        {
+          "size_id": "watch-one-size",
+          "size": "One Size",
+          "stock": 12
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-sunglasses",
+      "product_name": "Aviator Sunglasses",
+      "category_id": "cat-accessories",
+      "description": "Iconic metal frame pilot shades with 100% UV400 polarized scratch-resistant tinted lenses.",
+      "price": 899,
+      "brand": "The Finishing Touch",
+      "image": "accessories-sunglasses.jpg",
+      "sizes": [
+        {
+          "size_id": "sun-one-size",
+          "size": "One Size",
+          "stock": 22
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-belt",
+      "product_name": "Reversible Leather Belt",
+      "category_id": "cat-accessories",
+      "description": "Two-in-one genuine leather dress belt with swivel buckle, effortlessly switching between black and brown.",
+      "price": 599,
+      "brand": "The Finishing Touch",
+      "image": "accessories-belt.jpg",
+      "sizes": [
+        {
+          "size_id": "belt-32",
+          "size": "32",
+          "stock": 10
+        },
+        {
+          "size_id": "belt-34",
+          "size": "34",
+          "stock": 14
+        },
+        {
+          "size_id": "belt-36",
+          "size": "36",
+          "stock": 12
+        },
+        {
+          "size_id": "belt-38",
+          "size": "38",
+          "stock": 8
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-tote",
+      "product_name": "Canvas Market Tote",
+      "category_id": "cat-accessories",
+      "description": "Sturdy heavyweight organic cotton canvas tote bag with reinforced shoulder straps and interior zip pocket.",
+      "price": 399,
+      "brand": "Everyday Edit",
+      "image": "accessories-tote.jpg",
+      "sizes": [
+        {
+          "size_id": "tote-one-size",
+          "size": "One Size",
+          "stock": 25
+        }
+      ]
+    },
+    {
+      "product_id": "p-accessories-wallet",
+      "product_name": "Slim RFID Leather Wallet",
+      "category_id": "cat-accessories",
+      "description": "Compact bi-fold wallet made from premium leather with 8 card slots, billfold, and RFID-blocking lining.",
+      "price": 749,
+      "brand": "The Finishing Touch",
+      "image": "accessories-wallet.jpg",
+      "sizes": [
+        {
+          "size_id": "wall-one-size",
+          "size": "One Size",
+          "stock": 18
+        }
+      ]
+    }
+  ],
+  "users": [],
+  "carts": {},
+  "orders": [],
+  "nextOrderNumber": 1
+}

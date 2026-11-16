@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your cart | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-top">
+        <div class="container">
+          <p class="eyebrow">Almost yours</p>
+          <h1>Your shopping cart</h1>
+          <p>Review your items before checking out.</p>
+        </div>
+      </section>
+      <section class="shop-layout">
+        <div class="container">
+          <div id="cartNotice" class="notice" hidden></div>
+          <div id="cartContent" class="cart-layout">
+            <div id="cartItems" class="cart-items">
+              <p class="loading">Loading your cart…</p>
+            </div>
+            <aside class="summary-card">
+              <h2>Order summary</h2>
+              <div class="summary-row">
+                <span>Subtotal</span><strong id="cartSubtotal">₹0.00</strong>
+              </div>
+              <div class="summary-row">
+                <span>Delivery</span><strong>Free</strong>
+              </div>
+              <div class="summary-row total">
+                <span>Total</span><strong id="cartTotal">₹0.00</strong>
+              </div>
+              <a
+                class="button button-accent button-block"
+                href="/checkout.html"
+                id="checkoutLink"
+                >Continue to checkout →</a
+              ><a
+                class="button button-light button-block"
+                href="/products.html"
+                style="margin-top: 9px"
+                >Continue shopping</a
+              >
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/cart.js"></script>
+  </body>
+</html>

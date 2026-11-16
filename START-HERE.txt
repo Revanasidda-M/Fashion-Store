@@ -1,0 +1,14 @@
+FASHION STORE — START HERE
+
+1. Extract the ZIP file.
+2. Open the extracted fashion-store-complete folder in VS Code.
+3. Choose Terminal > New Terminal.
+4. Run: npm run dev
+5. Open this URL in Chrome: http://localhost:5000
+
+Important:
+- Do NOT open the HTML files directly or use Live Server for this packaged version.
+- The app has no third-party npm dependencies and does not require MySQL.
+- Keep the VS Code terminal running while you use the site.
+- Read README.md for the feature list and GitHub/deployment instructions.
+- Checkout is a demo. It does not collect real payments.

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My profile | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-top">
+        <div class="container">
+          <p class="eyebrow">Your account</p>
+          <h1>My profile</h1>
+          <p>Keep your contact and delivery details up to date.</p>
+        </div>
+      </section>
+      <section class="shop-layout">
+        <div class="container">
+          <div id="profileNotice" class="notice" hidden></div>
+          <div class="profile-layout">
+            <aside class="profile-side">
+              <div id="profileAvatar" class="profile-avatar">U</div>
+              <h2 id="profileSideName" style="font-size: 20px; margin: 0 0 4px">
+                Your profile
+              </h2>
+              <p id="profileSideEmail"></p>
+              <a
+                href="/orders.html"
+                style="color: #fff; font-weight: 700; font-size: 13px"
+                >View my orders →</a
+              >
+            </aside>
+            <section class="content-card">
+              <h2>Personal information</h2>
+              <form id="profileForm" class="profile-form">
+                <div class="form-field">
+                  <label for="name">Full name</label
+                  ><input id="name" required maxlength="100" />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email (cannot be changed)</label
+                  ><input id="email" type="email" disabled />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Phone</label><input id="phone" required />
+                </div>
+                <div class="form-field">
+                  <label for="pincode">PIN code</label
+                  ><input id="pincode" inputmode="numeric" />
+                </div>
+                <div class="form-field full">
+                  <label for="address">Street address</label
+                  ><textarea id="address" rows="2"></textarea>
+                </div>
+                <div class="form-field">
+                  <label for="city">City</label><input id="city" />
+                </div>
+                <div class="form-field">
+                  <label for="state">State</label><input id="state" />
+                </div>
+                <div class="form-field full">
+                  <button
+                    class="button button-accent"
+                    type="submit"
+                    id="saveProfileButton"
+                  >
+                    Save changes
+                  </button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/profile.js"></script>
+  </body>
+</html>

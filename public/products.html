@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop all products | Fashion Store</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="/index.html">fashion<span>.</span>store</a>
+        <nav class="nav-links" id="navbar" aria-label="Main navigation"></nav>
+      </div>
+    </header>
+    <main>
+      <section class="page-top">
+        <div class="container">
+          <p class="eyebrow">Find your fit</p>
+          <h1>Shop all products</h1>
+          <p>Search the collection or choose a category to narrow it down.</p>
+        </div>
+      </section>
+      <section class="shop-layout">
+        <div class="container">
+          <div class="category-pills" id="categoryPills" role="tablist" aria-label="Quick category filters">
+            <button class="category-pill active" type="button" data-category="">All Products</button>
+            <button class="category-pill" type="button" data-category="Men">Men</button>
+            <button class="category-pill" type="button" data-category="Women">Women</button>
+            <button class="category-pill" type="button" data-category="Kids">Kids</button>
+            <button class="category-pill" type="button" data-category="Footwear">Footwear</button>
+            <button class="category-pill" type="button" data-category="Accessories">Accessories</button>
+          </div>
+          <div class="filters">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search name, brand or description…"
+              aria-label="Search products"
+            /><select id="categoryFilter" aria-label="Filter by category">
+              <option value="">All categories</option>
+            </select>
+            <select id="sortFilter" aria-label="Sort products">
+              <option value="">Sort by: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A to Z</option>
+              <option value="name-desc">Name: Z to A</option>
+              <option value="brand-asc">Brand: A to Z</option>
+            </select>
+          </div>
+          <p class="results-line" id="resultsCount">Loading products…</p>
+          <div class="product-grid" id="productsContainer">
+            <p class="loading">Loading products…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a class="footer-brand" href="/index.html">fashion.store</a>
+        <p>© <span data-year></span> Fashion Store.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/products.js"></script>
+  </body>
+</html>
