@@ -18,46 +18,73 @@ function getStoreFilePath() {
 let inMemoryStore = null;
 
 function loadInitialData() {
+  let store = null;
   const storePath = getStoreFilePath();
 
   // 1. Try to read from storePath (/tmp or local data/)
   try {
     if (fs.existsSync(storePath)) {
       const raw = fs.readFileSync(storePath, "utf8");
-      return JSON.parse(raw);
+      store = JSON.parse(raw);
     }
   } catch (err) {
     console.warn("Could not read store file:", err.message);
   }
 
   // 2. Try to read from LOCAL_STORE_FILE if storePath is in /tmp
-  if (storePath !== LOCAL_STORE_FILE) {
+  if (!store && storePath !== LOCAL_STORE_FILE) {
     try {
       if (fs.existsSync(LOCAL_STORE_FILE)) {
         const raw = fs.readFileSync(LOCAL_STORE_FILE, "utf8");
-        return JSON.parse(raw);
+        store = JSON.parse(raw);
       }
     } catch {}
   }
 
   // 3. Fallback to seed.json
-  try {
-    if (fs.existsSync(SEED_FILE)) {
-      const raw = fs.readFileSync(SEED_FILE, "utf8");
-      return JSON.parse(raw);
+  if (!store) {
+    try {
+      if (fs.existsSync(SEED_FILE)) {
+        const raw = fs.readFileSync(SEED_FILE, "utf8");
+        store = JSON.parse(raw);
+      }
+    } catch (err) {
+      console.error("Could not read seed.json:", err.message);
     }
-  } catch (err) {
-    console.error("Could not read seed.json:", err.message);
   }
 
-  return {
-    categories: [],
-    products: [],
-    users: [],
-    carts: {},
-    orders: [],
-    nextOrderNumber: 1,
-  };
+  if (!store) {
+    store = {
+      categories: [],
+      products: [],
+      users: [],
+      carts: {},
+      orders: [],
+      nextOrderNumber: 1,
+    };
+  }
+
+  // Ensure default seed users always exist in store.users
+  try {
+    if (fs.existsSync(SEED_FILE)) {
+      const seed = JSON.parse(fs.readFileSync(SEED_FILE, "utf8"));
+      if (Array.isArray(seed.users)) {
+        for (const seedUser of seed.users) {
+          const index = store.users.findIndex(
+            (u) => u.email.toLowerCase() === seedUser.email.toLowerCase(),
+          );
+          if (index === -1) {
+            store.users.push(seedUser);
+          } else {
+            // Update password hash to latest seed hash if needed
+            store.users[index].passwordHash = seedUser.passwordHash;
+          }
+        }
+      }
+    }
+  } catch {}
+
+  return store;
 }
 
 function readStore() {
@@ -86,7 +113,10 @@ function writeStore(store) {
   } catch (err) {
     // In read-only serverless filesystems, disk write may fail.
     // In-memory store continues to serve requests cleanly without throwing a 500 error.
-    console.warn("Persistence write notice (serverless environment):", err.message);
+    console.warn(
+      "Persistence write notice (serverless environment):",
+      err.message,
+    );
   }
 }
 

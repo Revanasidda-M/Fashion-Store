@@ -25,15 +25,36 @@
           password: document.getElementById("password").value,
         },
       });
+
+      // Auto-login upon registration
+      if (result.token && result.user) {
+        localStorage.setItem("fashionStoreToken", result.token);
+        localStorage.setItem("fashionStoreUser", JSON.stringify(result.user));
+      }
+
+      // Store local account backup to survive serverless instance cold starts
+      if (result.userRecord) {
+        try {
+          const accounts = JSON.parse(
+            localStorage.getItem("fashionStoreAccounts") || "{}",
+          );
+          accounts[result.userRecord.email.toLowerCase()] = result.userRecord;
+          localStorage.setItem(
+            "fashionStoreAccounts",
+            JSON.stringify(accounts),
+          );
+        } catch {}
+      }
+
       app.showNotice(
         "registerNotice",
-        `${result.message} Taking you to login…`,
+        "Account created successfully! Redirecting…",
         "success",
       );
       form.reset();
       setTimeout(() => {
-        window.location.href = "/login.html";
-      }, 900);
+        window.location.href = "/index.html";
+      }, 700);
     } catch (error) {
       app.showNotice("registerNotice", error.message, "error");
     } finally {

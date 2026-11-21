@@ -4,18 +4,39 @@
   const submit = document.getElementById("loginSubmit");
   const next = new URLSearchParams(window.location.search).get("next");
 
+  const demoFillBtn = document.getElementById("fillDemoCredentials");
+  if (demoFillBtn) {
+    demoFillBtn.addEventListener("click", () => {
+      document.getElementById("email").value = "testuser@example.com";
+      document.getElementById("password").value = "password123";
+    });
+  }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     submit.disabled = true;
     submit.textContent = "Signing in…";
     app.showNotice("loginNotice", "", "info");
+
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const password = document.getElementById("password").value;
+
+    let fallbackUser = null;
+    try {
+      const accounts = JSON.parse(
+        localStorage.getItem("fashionStoreAccounts") || "{}",
+      );
+      fallbackUser = accounts[email] || null;
+    } catch {}
+
     try {
       const result = await app.apiRequest("/auth/login", {
         method: "POST",
         auth: false,
         body: {
-          email: document.getElementById("email").value.trim(),
-          password: document.getElementById("password").value,
+          email,
+          password,
+          fallbackUser: fallbackUser || undefined,
         },
       });
       localStorage.setItem("fashionStoreToken", result.token);

@@ -559,6 +559,41 @@ h3 {
   align-items: center;
   margin-top: 18px;
 }
+.demo-banner {
+  background: var(--soft);
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 14px 0 16px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.demo-banner code {
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--accent);
+}
+.demo-fill-btn {
+  margin-left: auto;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.demo-fill-btn:hover {
+  opacity: 0.85;
+}
 .auth-shell {
   min-height: calc(100vh - 150px);
   padding: 55px 0 75px;

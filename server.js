@@ -124,12 +124,25 @@ function base64url(value) {
   return Buffer.from(value).toString("base64url");
 }
 
-function createToken(userId) {
+function createToken(userOrId) {
   const now = Math.floor(Date.now() / 1000);
   const header = base64url(JSON.stringify({ alg: "HS256", typ: "JWT" }));
-  const payload = base64url(
-    JSON.stringify({ userId, iat: now, exp: now + 7 * 24 * 60 * 60 }),
-  );
+  const payloadData =
+    typeof userOrId === "object" && userOrId !== null
+      ? {
+          userId: userOrId.user_id,
+          email: userOrId.email,
+          name: userOrId.name,
+          phone: userOrId.phone || "",
+          address: userOrId.address || "",
+          city: userOrId.city || "",
+          state: userOrId.state || "",
+          pincode: userOrId.pincode || "",
+          iat: now,
+          exp: now + 7 * 24 * 60 * 60,
+        }
+      : { userId: userOrId, iat: now, exp: now + 7 * 24 * 60 * 60 };
+  const payload = base64url(JSON.stringify(payloadData));
   const content = `${header}.${payload}`;
   const signature = crypto
     .createHmac("sha256", JWT_SECRET)
@@ -176,7 +189,24 @@ function authenticatedUser(req) {
   const payload = verifyToken(match[1]);
   if (!payload) return null;
   const store = readStore();
-  return findUserById(store, payload.userId) || null;
+  let user = findUserById(store, payload.userId);
+  if (!user && payload.email) {
+    user = {
+      user_id: payload.userId,
+      name: payload.name || "Customer",
+      email: payload.email,
+      phone: payload.phone || "",
+      address: payload.address || "",
+      city: payload.city || "",
+      state: payload.state || "",
+      pincode: payload.pincode || "",
+      created_at: new Date().toISOString(),
+    };
+    store.users.push(user);
+    if (!store.carts[user.user_id]) store.carts[user.user_id] = [];
+    writeStore(store);
+  }
+  return user || null;
 }
 
 function cartView(store, userId) {
@@ -352,7 +382,10 @@ async function handleApi(req, res, url) {
     writeStore(store);
     return sendJson(res, 201, {
       success: true,
-      message: "Account created successfully. Please log in.",
+      message: "Account created successfully.",
+      token: createToken(user),
+      user: safeUser(user),
+      userRecord: user,
     });
   }
 
@@ -366,7 +399,23 @@ async function handleApi(req, res, url) {
     const email = cleanString(body.email, 160).toLowerCase();
     const password = typeof body.password === "string" ? body.password : "";
     const store = readStore();
-    const user = store.users.find((item) => item.email === email);
+    let user = store.users.find((item) => item.email === email);
+
+    // If cold serverless instance and user not found, check client fallback if provided
+    if (
+      !user &&
+      body.fallbackUser &&
+      body.fallbackUser.email === email &&
+      body.fallbackUser.passwordHash
+    ) {
+      if (await verifyPassword(password, body.fallbackUser.passwordHash)) {
+        user = { ...body.fallbackUser };
+        store.users.push(user);
+        if (!store.carts[user.user_id]) store.carts[user.user_id] = [];
+        writeStore(store);
+      }
+    }
+
     if (!user || !(await verifyPassword(password, user.passwordHash)))
       return sendJson(res, 401, {
         success: false,
@@ -375,7 +424,7 @@ async function handleApi(req, res, url) {
     return sendJson(res, 200, {
       success: true,
       message: "Login successful.",
-      token: createToken(user.user_id),
+      token: createToken(user),
       user: safeUser(user),
     });
   }
